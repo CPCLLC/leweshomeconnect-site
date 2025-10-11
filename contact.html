@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Contact Lewes Home Connect | Talk to a Local Expert</title>
+  <meta name="description" content="Reach out to Lewes Home Connect for local real-estate questions, partnerships, or home value requests." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://leweshomeconnect.com/contact.html">
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    :root { --bg:#0b1a2b; --panel:#0e2239; --line:#1f3a5f; --brand:#4da3ff; --ink:#fff; --muted:rgba(255,255,255,.85) }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif}
+    a{color:var(--brand);text-decoration:none}
+    .wrap{max-width:820px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:8px 0}
+    .brand{font-weight:800}
+    nav a{margin-left:18px;opacity:.9}
+    h1{font-size:clamp(28px,5vw,42px);margin:18px 0}
+    .grid{display:grid;gap:16px;grid-template-columns:1.1fr .9fr}
+    @media (max-width:800px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px}
+    label{display:block;margin:10px 0 6px}
+    input,textarea,select{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+    button{padding:12px 18px;border-radius:12px;border:0;background:var(--brand);color:#001a33;font-weight:700;cursor:pointer;margin-top:12px}
+    .muted{opacity:.85}
+    footer{padding:40px 0;opacity:.8;font-size:14px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><a href="/">Lewes Home Connect</a></div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Let’s Start the Conversation</h1>
+      <div class="grid">
+        <div class="card">
+          <!-- Replace the action with your real Formspree endpoint -->
+          <form action="https://formspree.io/f/YOUR_ENDPOINT" method="POST">
+            <label for="name">Name</label>
+            <input type="text" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" required>
+
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" name="phone">
+
+            <label for="intent">What do you need?</label>
+            <select name="intent" required>
+              <option value="buy">I want to buy in Lewes</option>
+              <option value="sell">I want to sell a home</option>
+              <option value="valuation">I want a home valuation</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="message">How can we help?</label>
+            <textarea name="message" rows="5" required></textarea>
+
+            <input type="hidden" name="_subject" value="New Inquiry — Lewes Home Connect" />
+            <button type="submit">Send Message</button>
+          </form>
+          <p class="muted" style="margin-top:10px">By submitting, you agree we may contact you about your request. No spam, ever.</p>
+        </div>
+
+        <div class="card">
+          <h2>Other Ways to Reach Us</h2>
+          <p class="muted">
+            📞 <strong>(302) XXX-XXXX</strong> — AI Assistant, 24/7<br>
+            📧 <strong>info@leweshomeconnect.com</strong><br>
+            Serving Lewes, Rehoboth, Milton, and surrounding 19958 communities.
+          </p>
+          <h3>Find Us</h3>
+          <p class="muted">Lewes, Delaware • Coastal DE</p>
+          <iframe
+            title="Lewes Map"
+            style="width:100%;height:220px;border:0;border-radius:12px"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Lewes%2C%20DE&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      © <span id="y"></span> Lewes Home Connect • Lewes, Delaware • <a href="/sitemap.xml">Sitemap</a>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Find a Home in Lewes, DE | Coastal Delaware Buyer Help | Lewes Home Connect</title>
+  <meta name="description" content="Tell us what you're looking for in Lewes (19958) and nearby Coastal Delaware. Get matched to listings and a trusted local expert." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://leweshomeconnect.com/find-a-home.html">
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    :root { --bg:#0b1a2b; --panel:#0e2239; --line:#1f3a5f; --brand:#4da3ff; --ink:#fff; --muted:rgba(255,255,255,.85) }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif}
+    a{color:var(--brand);text-decoration:none}
+    .wrap{max-width:980px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:8px 0}
+    .brand{font-weight:800}
+    nav a{margin-left:18px;opacity:.9}
+    h1{font-size:clamp(28px,5vw,44px);margin:18px 0}
+    .grid{display:grid;gap:16px;grid-template-columns:1.1fr .9fr}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px}
+    label{display:block;margin:10px 0 6px}
+    input,textarea,select{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+    button{padding:12px 18px;border-radius:12px;border:0;background:var(--brand);color:#001a33;font-weight:700;cursor:pointer;margin-top:12px}
+    .muted{opacity:.85}
+    footer{padding:40px 0;opacity:.8;font-size:14px}
+    .row{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+    @media (max-width:640px){.row{grid-template-columns:1fr}}
+    ul{margin:8px 0 0 16px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><a href="/">Lewes Home Connect</a></div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Find a Home in Lewes & Coastal Delaware</h1>
+      <div class="grid">
+        <div class="card">
+          <!-- Replace the action with your real Formspree endpoint -->
+          <form action="https://formspree.io/f/YOUR_ENDPOINT" method="POST">
+            <p class="muted">Tell us your must-haves and we’ll send matching listings and connect you with a trusted local expert.</p>
+
+            <div class="row">
+              <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" required>
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" required>
+              </div>
+            </div>
+
+            <div class="row">
+              <div>
+                <label for="phone">Phone (optional)</label>
+                <input type="tel" name="phone">
+              </div>
+              <div>
+                <label for="when">When are you hoping to buy?</label>
+                <select name="when" required>
+                  <option value="0-30">0–30 days</option>
+                  <option value="30-90">30–90 days</option>
+                  <option value="90-plus">90+ days</option>
+                  <option value="just-looking">Just looking</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div>
+                <label for="budget">Budget (approx)</label>
+                <select name="budget" required>
+                  <option value="under-400k">Under $400k</option>
+                  <option value="400-700k">$400k–$700k</option>
+                  <option value="700k-1m">$700k–$1M</option>
+                  <option value="1m-plus">$1M+</option>
+                </select>
+              </div>
+              <div>
+                <label for="beds">Bedrooms</label>
+                <select name="beds" required>
+                  <option>1+</option><option>2+</option><option>3+</option><option>4+</option>
+                </select>
+              </div>
+            </div>
+
+            <label for="areas">Preferred Areas</label>
+            <input type="text" name="areas" placeholder="e.g., Lewes, Rehoboth, Milton">
+
+            <label for="features">Must-Have Features</label>
+            <input type="text" name="features" placeholder="e.g., walk to beach, garage, single-story">
+
+            <label for="notes">Anything else?</label>
+            <textarea name="notes" rows="4" placeholder="School needs, HOA preferences, etc."></textarea>
+
+            <input type="hidden" name="_subject" value="Buyer Lead — Lewes Home Connect" />
+            <button type="submit">Send My Preferences</button>
+          </form>
+          <p class="muted" style="margin-top:10px">We’ll reply within 24 hours with options and next steps.</p>
+        </div>
+
+        <div class="card">
+          <h2>How We Help Buyers</h2>
+          <ul class="muted">
+            <li>Personalized listing alerts for 19958 & nearby zips</li>
+            <li>Local insight on neighborhoods, HOAs, and commute times</li>
+            <li>Introductions to trusted lenders, inspectors, and closing partners</li>
+          </ul>
+
+          <h3 style="margin-top:16px">Popular Areas</h3>
+          <p class="muted">Lewes • Rehoboth Beach • Milton • Broadkill • Cape Region</p>
+
+          <h3 style="margin-top:16px">Have a Realtor Already?</h3>
+          <p class="muted">Great — we can still provide local info and tools. If not, we can introduce you to a vetted Lewes agent.</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      © <span id="y"></span> Lewes Home Connect • <a href="/sitemap.xml">Sitemap</a>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
