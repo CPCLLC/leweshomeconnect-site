@@ -1,0 +1,38 @@
+name: Deploy to S3 + CloudFront
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write   # for OIDC
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # If you later add a build step (Astro/Next static export), do it here.
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: us-east-1
+
+      - name: Sync site to S3
+        run: |
+          aws s3 sync . s3://leweshomeconnect.com --delete \
+            --exclude ".git/*" --exclude ".github/*" \
+            --exclude "README.md" --exclude "LICENSE" \
+            --exclude ".gitignore"
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${{ secrets.CF_DISTRIBUTION_ID }}" \
+            --paths "/*"
