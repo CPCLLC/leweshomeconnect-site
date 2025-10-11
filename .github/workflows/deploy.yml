@@ -16,13 +16,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # If you later add a build step (Astro/Next static export), do it here.
+      - name: Ensure Python is available
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Generate sitemap.xml
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: |
+          python tools/generate_sitemap.py
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: us-east-1
+
 
       - name: Sync site to S3
         run: |
