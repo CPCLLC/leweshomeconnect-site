@@ -26,7 +26,7 @@ jobs:
 
       - name: Sync site to S3
         run: |
-          aws s3 sync . s3://leweshomeconnect.com --delete \
+          aws s3 sync . s3://gwsites-leweshomeconnect --delete \
             --exclude ".git/*" --exclude ".github/*" \
             --exclude "README.md" --exclude "LICENSE" \
             --exclude ".gitignore"
